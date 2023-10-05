@@ -4,7 +4,7 @@ import numpy as np
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
-import squarify as sq
+
 
 st.set_page_config(layout='wide')
 st.title("Medición del bienestar")
