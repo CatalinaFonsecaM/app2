@@ -4,6 +4,7 @@ import numpy as np
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
+import geopandas as gdp
 
 
 st.set_page_config(layout='wide')
