@@ -1,3 +1,8 @@
 streamlit
 matplotlib
 geopandas
+pandas 
+numpy 
+plotly.express
+seaborn
+geopandas
