@@ -219,12 +219,12 @@ with tab2:
 
 with tab3:
     fig, ax = plt.subplots(1, 1)
-    ax = df2.plot(
+    df2.plot(
     column="pib",
     scheme="Quantiles",
     cmap="plasma",
     legend=True,
     legend_kwds={"fmt": "{:.0f"},
-    )
+    ax=ax)
     ax.set_axis_off()
     st.pyplot(fig)
