@@ -1,5 +1,5 @@
 streamlit
-mapclassify==2.4.0
+mapclassify==2.6.1
 matplotlib
 geopandas
 pandas 
