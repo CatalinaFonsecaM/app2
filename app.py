@@ -5,7 +5,6 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 import geopandas as gpd
-import mapclassify
 
 
 st.set_page_config(layout='wide')
