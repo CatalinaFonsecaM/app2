@@ -217,4 +217,14 @@ with tab2:
                     labels={'nutricion': 'Nutrición', 'salud': 'Salud', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
 
-
+with tab3:
+    fig, ax = plt.subplots(1, 1)
+    ax = df2.plot(
+    column="pib",
+    scheme="Quantiles",
+    cmap="plasma",
+    legend=True,
+    legend_kwds={"fmt": "{:.0f}"},
+    )
+    ax.set_axis_off();
+    st.plotly_chart(fig)
