@@ -5,6 +5,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 import geopandas as gpd
+import mapclassify
 
 
 st.set_page_config(layout='wide')
@@ -224,7 +225,7 @@ with tab3:
     scheme="Quantiles",
     cmap="plasma",
     legend=True,
-    legend_kwds={"fmt": "{:.0f}"},
+    legend_kwds={"fmt": "{:.0f"},
     )
-    ax.set_axis_off();
-    st.plotly_chart(fig)
+    ax.set_axis_off()
+    st.pyplot(fig)
