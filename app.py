@@ -10,7 +10,7 @@ import geopandas as gpd
 st.set_page_config(layout='wide')
 st.title("Medición del bienestar")
 df = pd.read_csv('dataframe.csv')
-df2 = gpd.read_geojson('dataframe2.geojson')
+df2 = gpd.read_file('dataframe2.geojson')
 
 tab1, tab2, tab3, tab4 = st.tabs(['Análisis estadístico', 'Análisis gráfico específico', 'Análisis georreferenciado', 'Indicador de bienestar'])
 
