@@ -1,4 +1,5 @@
 streamlit
+mapclassify
 matplotlib
 geopandas
 pandas 
@@ -6,4 +7,4 @@ numpy
 plotly.express
 seaborn
 geopandas
-pip install mapclassify
+
