@@ -224,7 +224,7 @@ with tab3:
     scheme="Quantiles",
     cmap="plasma",
     legend=True,
-    legend_kwds={"fmt": "{:.0f"},
+    legend_kwds={"fmt": "{:.0f"}},
     ax=ax)
     ax.set_axis_off()
     st.pyplot(fig)
