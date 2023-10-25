@@ -12,7 +12,7 @@ st.title("Medición del bienestar")
 df = pd.read_csv('dataframe.csv')
 df2 = gpd.read_file('dataframe2.geojson')
 
-tab1, tab2, tab3, tab4 = st.tabs(['Análisis estadístico', 'Análisis gráfico específico', 'Análisis georreferenciado', 'Indicador de bienestar'])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(['Análisis estadístico', 'Análisis gráfico específico', 'Análisis de hipótesis', 'Análisis georreferenciado', 'Indicador de bienestar'])
 
 with tab1:
     st.dataframe(df.describe())
@@ -217,7 +217,7 @@ with tab2:
                     labels={'nutricion': 'Nutrición', 'salud': 'Salud', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
 
-with tab3:
+with tab4:
 
     st.title("Mapa General")
     fig, ax = plt.subplots(1, 1, figsize=(10, 10))
@@ -349,7 +349,7 @@ with tab3:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"Nivel de desnutriicón de {year_range} en Países de América Latina")
+        ax.set_title(f"Nivel de desnutricón de {year_range} en Países de América Latina")
     plt.suptitle("EVOLUCIÓN DE LA DESNUTRICIÓN EN AMÉRICA LATINA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
@@ -404,7 +404,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
-with tab4:
+with tab5:
 
-    latex_formula = r"\frac{{v1 + v2 + v3 + v4}}{{v5}}"
+    latex_formula = r"\frac{{PIB + Salud + Desnutrición + Agua}}{{Desempleo}}"
     st.latex(latex_formula)
