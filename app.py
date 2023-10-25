@@ -420,11 +420,11 @@ with tab5:
         df_year = df3[(df3['año'] >= start_year) & (df3['año'] <= end_year)]
         df_year.plot(
             column="indicador",
-            cmap="plasma",  # Configura el esquema de color aquí
+            cmap="plasma", 
             legend=True,
             legend_kwds={"fmt": "{:.0f}"},
             ax=ax,
-        )
+                )
         ax.set_axis_off()
         ax.set_title(f"Indicador de bienestar {year_range} en Países de América")
     plt.suptitle("EVOLUCIÓN DEL INDICADOR DE BIENESTAR (2002-2019)")
