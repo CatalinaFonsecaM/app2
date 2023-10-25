@@ -287,7 +287,7 @@ with tab3:
     ax.set_axis_off()
     st.pyplot(fig)
 
-     st.subheader('Evolución por variables')
+    st.subheader('Evolución por variables')
 
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
