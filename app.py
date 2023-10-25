@@ -424,8 +424,6 @@ with tab5:
             column="indicador",
             scheme="Quantiles",
             cmap="plasma",
-            legend=True,
-            legend_kwds={"fmt": "{:.0f}"},
             ax=ax,
         )
     
