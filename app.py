@@ -313,3 +313,128 @@ with tab3:
     plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA LATINA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
+
+    fig, axs = plt.subplots(2, 2, figsize=(12, 12))
+    axs = axs.flatten()
+    years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
+    df2['año'] = df2['año'].astype(int)
+    
+    for i, ax in enumerate(axs):
+        year_range = years[i]
+        start_year, end_year = map(int, year_range.split("-"))
+        df_year = df2[(df2['año'] >= start_year) & (df2['año'] <= end_year)]
+    
+        df_year.plot(
+            column="pib",
+            scheme="Quantiles",
+            cmap="plasma",
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
+            ax=ax,
+        )
+    
+        ax.set_axis_off()
+        ax.set_title(f"PIB de {year_range} en Países de América Latina")
+    
+    plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA LATINA (2002-2019)")
+    plt.tight_layout()
+    st.pyplot(fig)
+
+    fig, axs = plt.subplots(2, 2, figsize=(12, 12))
+    axs = axs.flatten()
+    years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
+    df2['año'] = df2['año'].astype(int)
+
+    for i, ax in enumerate(axs):
+    
+        year_range = years[i]
+        start_year, end_year = map(int, year_range.split("-"))
+        df_year = df2[(df2['año'] >= start_year) & (df2['año'] <= end_year)]
+    
+        df_year.plot(
+            column="salud",
+            scheme="Quantiles",
+            cmap="plasma",
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
+            ax=ax,
+        )
+    
+        ax.set_axis_off()
+        ax.set_title(f"Gasto en salud  {year_range} en Países de América Latina")
+    plt.suptitle("EVOLUCIÓN DEL GASTO EN SALUD EN AMÉRICA LATINA (2002-2019)")
+    plt.tight_layout()
+    st.pyplot(fig)
+
+    fig, axs = plt.subplots(2, 2, figsize=(12, 12))
+    axs = axs.flatten()
+    years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
+    df2['año'] = df2['año'].astype(int)
+
+    for i, ax in enumerate(axs):
+        year_range = years[i]
+        start_year, end_year = map(int, year_range.split("-"))
+        df_year = df2[(df2['año'] >= start_year) & (df2['año'] <= end_year)]
+    
+        df_year.plot(
+            column="nutricion",
+            scheme="Quantiles",
+            cmap="plasma",
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
+            ax=ax,
+        )
+    
+        ax.set_axis_off()
+        ax.set_title(f"Nivel de desnutriicón de {year_range} en Países de América Latina")
+    plt.suptitle("EVOLUCIÓN DE LA DESNUTRICIÓN EN AMÉRICA LATINA (2002-2019)")
+    plt.tight_layout()
+    st.pyplot(fig)
+
+    fig, axs = plt.subplots(2, 2, figsize=(12, 12))
+    axs = axs.flatten()
+    years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
+    df2['año'] = df2['año'].astype(int)
+    for i, ax in enumerate(axs):
+        year_range = years[i]
+        start_year, end_year = map(int, year_range.split("-"))
+        df_year = df2[(df2['año'] >= start_year) & (df2['año'] <= end_year)]
+    
+        df_year.plot(
+            column="agua",
+            scheme="Quantiles",
+            cmap="plasma",
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
+            ax=ax,
+        )
+    
+        ax.set_axis_off()
+        ax.set_title(f"Nivel de acceso al agua {year_range} en Países de América Latina")
+    plt.suptitle("EVOLUCIÓN DEL ACCESO AL AGUA EN AMÉRICA LATINA (2002-2019)")
+    plt.tight_layout()
+    st.pyplot(fig)
+
+    fig, axs = plt.subplots(2, 2, figsize=(12, 12))
+    axs = axs.flatten()
+    years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
+    df2['año'] = df2['año'].astype(int)
+    for i, ax in enumerate(axs):
+        year_range = years[i]
+        start_year, end_year = map(int, year_range.split("-"))
+        df_year = df2[(df2['año'] >= start_year) & (df2['año'] <= end_year)]
+    
+        df_year.plot(
+            column="desempleo",
+            scheme="Quantiles",
+            cmap="plasma",
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
+            ax=ax,
+        )
+    
+        ax.set_axis_off()
+        ax.set_title(f"Nivel de desempleo {year_range} en Países de América Latina")
+    plt.suptitle("EVOLUCIÓN DEL DESEMPLEO EN AMÉRICA LATINA (2002-2019)")
+    plt.tight_layout()
+    st.pyplot(fig)
