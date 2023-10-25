@@ -287,8 +287,28 @@ with tab3:
     ax.set_axis_off()
     st.pyplot(fig)
 
+    fig, axs = plt.subplots(1, 5, figsize=(20, 4))
+
+    
+    columns = ["pib", "desempleo", "salud", "agua", "nutricion"]
+    titles = ["PIB per cápita", "Desempleo", "Salud", "Recursos de agua", "Nivel de desnutrición"]
+    
+    for i, (column, title) in enumerate(zip(columns, titles)):
+        ax = axs[i]
+        df2.plot(
+            column=column,
+            scheme="Quantiles",
+            cmap="plasma",
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
+            ax=ax
+        )
+        ax.set_title(title)
+        ax.set_axis_off()
+    plt.tight_layout()
+    st.pyplot(fig)
+
     st.subheader('Evolución por variables')
-
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
@@ -314,6 +334,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
+    st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
@@ -340,6 +361,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
+    st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
@@ -366,6 +388,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
+    st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
@@ -391,6 +414,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
+    st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
@@ -415,6 +439,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
+    st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
