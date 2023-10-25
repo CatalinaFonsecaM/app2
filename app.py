@@ -220,7 +220,9 @@ with tab2:
 with tab3:
 
     fig, ax = plt.subplots(1, 1)
-    df2.plot()
+    df2.plot(
+    column='geometry'
+    )
     plt.title("Mapa General")
     ax.set_axis_off()
     st.pyplot(fig)
@@ -234,5 +236,6 @@ with tab3:
     legend=True,
     legend_kwds={"fmt": "{:.0f}"},
     ax=ax)
+    plt.title("PIB per cápita")
     ax.set_axis_off()
     st.pyplot(fig)
