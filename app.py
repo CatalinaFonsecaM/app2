@@ -219,6 +219,20 @@ with tab2:
                     labels={'nutricion': 'Nutrición', 'salud': 'Salud', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
 
+with tab3:
+
+    st.subheader('Variable #1: Tasa de desempleo')
+    latex_formula = r"H_0: \text{No hay diferencia significativa en las tasas de desempleo entre Colombia y Suramérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y suramerica}"
+
+    latex_formula = r"H_0: \text{No hay diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
+
+
+
+
+
+
 with tab4:
 
     st.title("Mapa General")
