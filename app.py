@@ -419,7 +419,7 @@ with tab5:
     for i, ax in enumerate(axs):
         year_range = years[i]
         start_year, end_year = map(int, year_range.split("-"))
-        df_year = df5[(df5['año'] >= start_year) & (df5['año'] <= end_year)]
+        df_year = df3[(df3['año'] >= start_year) & (df3['año'] <= end_year)]
     
         df_year.plot(
             column="indicador",
