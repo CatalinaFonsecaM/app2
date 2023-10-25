@@ -20,13 +20,12 @@ with tab1:
     st.dataframe(df.describe())
 
     t= """
-    La media de cada una de las variables teniendo en cuenta los 17 años y los 15 países del 
-    panel, reflejan el desempeño de cada una de las variables escogidas para el estudio en la 
-    región a lo largo del tiempo. La tasa  promedio de desempleo fue de 6.87%, el ingreso per 
-    capita promedio fue de $13,292 dólares, pasando al gasto per capita en salud este fue de 
-    $ 1, 350 dólares, mientas que el acceso a agua a recursos de agua dulce de la región en 
-    centimetros cubidos fue de 20,948. Finalmente la región conto con una tasa de desnutrición 
-    promedio de 6.25%. 
+    La media de cada una de las variables teniendo en cuenta los 17 años y los 15 países del panel,
+    reflejan el desempeño de cada una de las variables escogidas para el estudio en la región a lo 
+    largo del tiempo. La tasa  promedio de desempleo fue de 6.87%, el ingreso per cápita promedio fue 
+    de $13,292 dólares, pasando al gasto per cápita en salud este fue de $ 1, 350 dólares, mientras 
+    que el acceso a agua a recursos de agua dulce de la región en centímetros cúbicos fue de 20,948. 
+    Finalmente la región contó con una tasa de desnutrición promedio de 6.25%.  
     """
     st.text(t)
 
@@ -153,6 +152,16 @@ with tab1:
     fig.update_traces(textposition="bottom right")
     st.plotly_chart(fig)
 
+    x= """
+    La evolución de la tasa de desnutrición, nos permite evidenciar en qué puntos del panel de tiempo 
+    los países tuvieron puntos altos o bajos, así mismo conocer cuáles fueron los de mejor y peor 
+    desempeño, entre los puntos destacables, se encuentra Bolivia que a inicios de 2002 con 26,9%, 
+    logrando disminuir su tasa a 2019 en 11,9%. Mientras que una de las tasas más bajas antes de 2010, 
+    se convirtió en una de las más altas, siendo el caso de Venezuela que a 2019 cerró con una tasa de 
+    desnutrición de 24.9%. Mientras que la más baja de manera constante fue Canadá.  
+    """
+    st.text(x)
+
     fig, ax = plt.subplots(1, 1)
     fig = px.bar(df, x='año', y=['pib', 'desempleo'],
              color='pais',
@@ -160,6 +169,13 @@ with tab1:
              height=400)
     fig.update_layout(title_text='Comparación de PIB percapita y el desempleo a lo largo del tiempo')
     st.plotly_chart(fig)
+
+    x= """
+    Al comparar estas dos variables se logra evidenciar que la mayor participación la tiene Estados 
+    Unidos, en cada uno de los años estudiados, mientras que los de menor participación fueron Brasil, 
+    Perú y Colombia.
+    """
+    st.text(x)
 
     fig, ax = plt.subplots(1, 1)
     paises_interes = ['Colombia', 'Venezuela', 'Uruguay', 'Peru', 'Paraguay', 'Ecuador', 'Chile', 'Brasil', 'Bolivia', 'Argentina']
@@ -169,6 +185,14 @@ with tab1:
     fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
     st.plotly_chart(fig)
 
+    x= """
+    Al hacer un análisis más centrado en la región de Sur, respecto al ingreso per cápita se puede 
+    videnciar que el país con mayor ingreso, teniendo en cuenta la media entre 2002 y 2019 fue Uruguay 
+    con  $12,170 dólares, seguido por Chile con $11, 667 dólares, mientras que el de menor ingreso per 
+    cápita es Bolivia con $2, 144 dólares.
+    """
+    st.text(x)
+
     fig, ax = plt.subplots(1, 1)
     paises_interes = ['Colombia', 'Venezuela', 'Uruguay', 'Peru', 'Paraguay', 'Ecuador', 'Chile', 'Brasil', 'Bolivia', 'Argentina']
     df_filtrado = df[df['pais'].isin(paises_interes)]
@@ -176,6 +200,14 @@ with tab1:
     fig = px.bar(media_por_pais, x='pais', y='salud', title='Comparación del gasto percapita en salud en America del Sur', text='salud',color='pais')
     fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
     st.plotly_chart(fig)
+
+    x= """
+    Al igual que en el anterior apartado, el mayor gasto en salud se encuentra en Uruguay con $1,044 
+    dólares por persona, seguido de Argentina con $912 dólares en promedio de gasto per cápita. El país 
+    con menor gasto fue Bolivia, que refleja uno de los peores desempeños a comparación de los demás 
+    países de América del Sur.
+    """
+    st.text(x)
 
     fig, ax = plt.subplots(1, 1)
     paises_interes = ['Colombia', 'Venezuela', 'Uruguay', 'Peru', 'Paraguay', 'Ecuador', 'Chile', 'Brasil', 'Bolivia', 'Argentina']
@@ -185,6 +217,15 @@ with tab1:
     fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
     st.plotly_chart(fig)
 
+    x= """
+    Teniendo en cuenta la media de la tasa de desempleo entre 2002 y 2019, el país con la tasa de 
+    desempleo más alta fue Colombia con 10,66% seguido por Argentina con una tasa de 9,70%. 
+    Por otro lado, el país con la menor tasa de desempleo en América del Sur es Bolivia con 2,76%, 
+    lo cual sorprende teniendo en cuenta que anteriormente se evidenció que era el país con menor 
+    ingreso per cápita. 
+    """
+    st.text(x)
+
     fig, ax = plt.subplots(1, 1)
     paises_interes = ['Colombia', 'Venezuela', 'Uruguay', 'Peru', 'Paraguay', 'Ecuador', 'Chile', 'Brasil', 'Bolivia', 'Argentina']
     df_filtrado = df[df['pais'].isin(paises_interes)]
@@ -192,6 +233,14 @@ with tab1:
     fig = px.bar(media_por_pais, x='pais', y='agua', title='Comparación de recursos internos renovables de agua dulce en America del Sur', text='agua', color='pais')
     fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
     st.plotly_chart(fig)
+
+    x= """
+    Al revisar, el acceso a recursos de agua dulce en América del Sur, teniendo en cuenta la 
+    disponibilidad per cápita, se evidencia que Perú es el país con mayor desempeño en esta 
+    variable con un promedio de 55.554 centimetros cúbicos por habitante, mientras que el que 
+    menor disponibilidad de este recurso tiene es Argentina con 7092 cm3. 
+    """
+    st.text(x)
 
     fig, ax = plt.subplots(1, 1)
     paises_interes = ['Colombia', 'Venezuela', 'Uruguay', 'Peru', 'Paraguay', 'Ecuador', 'Chile', 'Brasil', 'Bolivia', 'Argentina']
@@ -201,6 +250,13 @@ with tab1:
     fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
     st.plotly_chart(fig)
 
+    x= """
+    La media del % de desnutrición en América del Sur, permite ver que Bolivia tiene la 
+    tasa más alta de la región, incluso duplicando el promedio de esta, con una tasa de 19,76%. 
+    Mientras que la menor fue la de Uruguay con 2,86%, seguido de Chile con 3,12%.
+    """
+    st.text(x)
+    
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Argentina', 'Bolivia', 'Brazil', 'Canada', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'Mexico', 'Paraguay', 'Peru', 'United States', 'Uruguay', 'Venezuela, RB']
     df_seleccionados = df[df['pais'].isin(paises_seleccionados)]
@@ -209,6 +265,14 @@ with tab1:
                     title='Media del PIB ',
                     labels={'pib': 'Media del PIB per capita'})
     st.plotly_chart(fig)
+
+    x= """
+    Con este gráfico podemos evidenciar la proporción que abarca cada uno de los países 
+    respecto al ingreso per cápita en los países de América, evidenciando que Estados 
+    Unidos y Canadá son los países con mayor ingreso, por lo que son los países con mayor 
+    participación, mientras que el  de menor participación es Bolivia.
+    """
+    st.text(x)
 
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Argentina', 'Bolivia', 'Brazil', 'Canada', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'Mexico', 'Paraguay', 'Peru', 'United States', 'Uruguay', 'Venezuela, RB']
@@ -219,6 +283,15 @@ with tab1:
                     labels={'salud': 'Media de gasto en salud'})
     st.plotly_chart(fig)
 
+    x= """
+    Con este gráfico podemos evidenciar la proporción que abarca cada uno de los países 
+    respecto al  gasto en salud per cápita en los países de América, evidenciando 
+    Estados Unidos y Canadá son los países con mayor gasto, no obstante, la participación 
+    de Estados Unidos es casi el doble que la de Canadá, mientras que el  de menor participación 
+    y por ende gasto son Bolivia y Perú.    
+    """
+    st.text(x)
+
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Argentina', 'Bolivia', 'Brazil', 'Canada', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'Mexico', 'Paraguay', 'Peru', 'United States', 'Uruguay', 'Venezuela, RB']
 
@@ -228,7 +301,15 @@ with tab1:
                     title='Media del desempleo',
                     labels={'desempleo': 'Media del desempleo (calculado en %)'})
     st.plotly_chart(fig)
-
+    x= """
+    Con este gráfico podemos evidenciar la proporción que abarca cada uno de los países 
+    respecto a la media de la tasa de desempleo en los países de América, evidenciando 
+    que esta es una de las variables más homogéneas, lo que refleja que varios países de 
+    América tienen tasas de desempleo cercanas, sin embargo, la de mayor participación es 
+    la de Colombia, y la de menor Bolivia. 
+    """
+    st.text(x)
+    
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Argentina', 'Bolivia', 'Brazil', 'Canada', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'Mexico', 'Paraguay', 'Peru', 'United States', 'Uruguay', 'Venezuela, RB']
     df_seleccionados = df[df['pais'].isin(paises_seleccionados)]
@@ -238,6 +319,14 @@ with tab1:
                     labels={'agua': 'Media de recursos internos'})
     st.plotly_chart(fig)
 
+    x= """
+    Con este gráfico podemos evidenciar la proporción que abarca cada uno de los países 
+    respecto al  acceso de recursos de agua dulce en los países de América, evidenciando 
+    que Canadá es el país con mayor participación, seguido de Perú y Chile, siendo que estos 
+    dos tienen una proporción parecida. Por otro lado, el de menor participación es México.
+    """
+    st.text(x)
+    
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Argentina', 'Bolivia', 'Brazil', 'Canada', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'Mexico', 'Paraguay', 'Peru', 'United States', 'Uruguay', 'Venezuela, RB']
     df_seleccionados = df[df['pais'].isin(paises_seleccionados)]
@@ -246,6 +335,17 @@ with tab1:
                     title='Media de Prevalencia de la desnutrición (% de la población)',
                     labels={'nutricion': 'Media de nutricion'})
     st.plotly_chart(fig)
+
+    x= """
+    Con este gráfico podemos evidenciar la proporción que abarca cada uno de los países 
+    respecto a la tasa de desnutrición en los países de América, evidenciando  que Bolivia, 
+    es el país con la mayor tasa de desnutrición, casi duplicando e incluso triplicando la 
+    participación de la mayoría de países estudiados, a excepción de Ecuador que cuenta con 
+    una tasa de desnutrición de 15,24%. Mientras que las tasas de desnutrición más baja, se 
+    encuentran en países de Norte América siendo estos Estados Unidos y Canadá. 
+    """
+    st.text(x)
+
 with tab2:
     st.subheader('Análisis gráfico específico')
 
