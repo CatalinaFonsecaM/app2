@@ -230,9 +230,41 @@ with tab3:
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
     st.latex(latex_formula)
 
+    st.subheader('Variable #2: PIB (Producto Interno Bruto)')
+    latex_formula = r"H_0: \text{No hay diferencia significativa en el Ingreso Per Cápita entre Colombia y Suramérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el Ingreso Per Cápita entre Colombia y Suramerica}"
+    st.latex(latex_formula)
 
+    latex_formula = r"H_0: \text{No hay diferencia significativa en el Ingreso Per Cápita entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el Ingreso Per Cápita entre Colombia y Norteamérica}"
+    st.latex(latex_formula)
 
+    st.subheader('Variable #3: Salud')
+    latex_formula = r"H_0: \text{No hay diferencia significativa del gasto en salud entre Colombia y Suramerica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia ignificativa del gasto en salud entre Colombia y Suramerica}"
+    st.latex(latex_formula)
 
+    latex_formula = r"H_0: \text{No hay diferencia significativa del gasto en salud entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia ignificativa del gasto en salud entre Colombia y Norteamérica}"
+    st.latex(latex_formula)
+
+    st.subheader('Variable #4: Desnutrición')
+    latex_formula = r"H_0: \text{No hay diferencia significativa en los indicadores de desnutrición entre Colombia Suramerica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en los indicadores de desnutrición entre Colombia y Suramerica}"
+    st.latex(latex_formula)
+
+    latex_formula = r"H_0: \text{No hay diferencia significativa en los indicadores de desnutrición entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en los indicadores de desnutrición entre Colombia y Norteamérica}"
+    st.latex(latex_formula)
+
+    st.subheader('Variable #5: Acceso al agua')
+    latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso al agua potable entre Colombia y Suramerica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso al agua potable entre Colombia y Suramerica}"
+    st.latex(latex_formula)
+
+    latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso al agua potable entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso al agua potable entre Colombia y Norteamérica}"
+    st.latex(latex_formula)
 
 
 with tab4:
