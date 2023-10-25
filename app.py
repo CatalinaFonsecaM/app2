@@ -14,7 +14,7 @@ df2 = gpd.read_file('dataframe2.geojson')
 df3 = gpd.read_file('df3.geojson')
 
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(['Análisis estadístico', 'Análisis gráfico específico', 'Análisis de hipótesis', 'Análisis georreferenciado', 'Indicador de bienestar'])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Análisis estadístico', 'Análisis gráfico específico', 'Análisis de hipótesis', 'Análisis georreferenciado', 'Indicador de bienestar', 'Creado por:'])
 
 with tab1:
     st.dataframe(df.describe())
@@ -814,7 +814,13 @@ with tab5:
     """
     st.text(texto_simple)
 
-
+with tab6:
+    x="""
+    - Catalina Fonseca Martinez
+    - Jeffrey Chamorro Sanchez
+    - Karen Pedraza Mesa
+    """
+    st.text(x)
 
 
 
