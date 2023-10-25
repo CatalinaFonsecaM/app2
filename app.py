@@ -219,9 +219,10 @@ with tab2:
 
 with tab3:
 
+    fig, ax = plt.subplots(1, 1)
     df2.plot()
     plt.title("Mapa General")
-    plt.show()
+    st.pyplot(fig)
 
     
     fig, ax = plt.subplots(1, 1)
