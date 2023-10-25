@@ -221,7 +221,9 @@ with tab3:
 
     st.title("Mapa General")
     fig, ax = plt.subplots(1, 1, figsize=(10, 10))
-    df2.plot(ax=ax)
+    df2.plot(
+    cmap="plasma", 
+    ax=ax)
     st.pyplot(fig)
     
     fig, ax = plt.subplots(1, 1)
@@ -232,6 +234,54 @@ with tab3:
     legend=True,
     legend_kwds={"fmt": "{:.0f}"},
     ax=ax)
-    plt.title("PIB per cápita")
+    plt.title("Comparación del PIB per cápita")
+    ax.set_axis_off()
+    st.pyplot(fig)
+
+    fig, ax = plt.subplots(1, 1)
+    df2.plot(
+    column="desempleo",
+    scheme="Quantiles",
+    cmap="plasma",
+    legend=True,
+    legend_kwds={"fmt": "{:.0f}"},
+    ax=ax)
+    plt.title("Comparación del desempleo")
+    ax.set_axis_off()
+    st.pyplot(fig)
+
+    fig, ax = plt.subplots(1, 1)
+    df2.plot(
+    column="salud",
+    scheme="Quantiles",
+    cmap="plasma",
+    legend=True,
+    legend_kwds={"fmt": "{:.0f}"},
+    ax=ax)
+    plt.title("Comparación de la salud")
+    ax.set_axis_off()
+    st.pyplot(fig)
+
+    fig, ax = plt.subplots(1, 1)
+    df2.plot(
+    column="agua",
+    scheme="Quantiles",
+    cmap="plasma",
+    legend=True,
+    legend_kwds={"fmt": "{:.0f}"},
+    ax=ax)
+    plt.title("Comparación de los recursos de agua")
+    ax.set_axis_off()
+    st.pyplot(fig)
+
+    fig, ax = plt.subplots(1, 1)
+    df2.plot(
+    column="nutricion",
+    scheme="Quantiles",
+    cmap="plasma",
+    legend=True,
+    legend_kwds={"fmt": "{:.0f}"},
+    ax=ax)
+    plt.title("Comparación del nivel de desnutrición")
     ax.set_axis_off()
     st.pyplot(fig)
