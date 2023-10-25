@@ -226,73 +226,12 @@ with tab3:
     ax=ax)
     ax.set_axis_off()
     st.pyplot(fig)
-    
-    fig, ax = plt.subplots(1, 1)
-    df2.plot(
-    column="pib",
-    scheme="Quantiles",
-    cmap="plasma",
-    legend=True,
-    legend_kwds={"fmt": "{:.0f}"},
-    ax=ax)
-    plt.title("Comparación del PIB per cápita")
-    ax.set_axis_off()
-    st.pyplot(fig)
 
-    fig, ax = plt.subplots(1, 1)
-    df2.plot(
-    column="desempleo",
-    scheme="Quantiles",
-    cmap="plasma",
-    legend=True,
-    legend_kwds={"fmt": "{:.0f}"},
-    ax=ax)
-    plt.title("Comparación del desempleo")
-    ax.set_axis_off()
-    st.pyplot(fig)
-
-    fig, ax = plt.subplots(1, 1)
-    df2.plot(
-    column="salud",
-    scheme="Quantiles",
-    cmap="plasma",
-    legend=True,
-    legend_kwds={"fmt": "{:.0f}"},
-    ax=ax)
-    plt.title("Comparación de la salud")
-    ax.set_axis_off()
-    st.pyplot(fig)
-
-    fig, ax = plt.subplots(1, 1)
-    df2.plot(
-    column="agua",
-    scheme="Quantiles",
-    cmap="plasma",
-    legend=True,
-    legend_kwds={"fmt": "{:.0f}"},
-    ax=ax)
-    plt.title("Comparación de los recursos de agua")
-    ax.set_axis_off()
-    st.pyplot(fig)
-
-    fig, ax = plt.subplots(1, 1)
-    df2.plot(
-    column="nutricion",
-    scheme="Quantiles",
-    cmap="plasma",
-    legend=True,
-    legend_kwds={"fmt": "{:.0f}"},
-    ax=ax)
-    plt.title("Comparación del nivel de desnutrición")
-    ax.set_axis_off()
-    st.pyplot(fig)
-
+    st.divider()
     fig, axs = plt.subplots(1, 5, figsize=(20, 4))
-
-    
     columns = ["pib", "desempleo", "salud", "agua", "nutricion"]
     titles = ["PIB per cápita", "Desempleo", "Salud", "Recursos de agua", "Nivel de desnutrición"]
-    
+
     for i, (column, title) in enumerate(zip(columns, titles)):
         ax = axs[i]
         df2.plot(
@@ -308,6 +247,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig)
 
+    st.divider()
     st.subheader('Evolución por variables')
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
@@ -463,3 +403,8 @@ with tab3:
     plt.suptitle("EVOLUCIÓN DEL DESEMPLEO EN AMÉRICA LATINA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
+
+with tab4:
+
+    latex_formula = r"\frac{{v1 + v2 + v3 + v4}}{{v5}}"
+    st.latex(latex_formula)
