@@ -225,7 +225,9 @@ with tab3:
     latex_formula = r"H_0: \text{No hay diferencia significativa en las tasas de desempleo entre Colombia y Suramérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y suramerica}"
     st.latex(latex_formula)
-    texto_simple = "Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value menor a 0.05 se rechaza la hipótesis nula, por ende si existe una diferencia significativa en las tasas de desempleo entre Colombia y los paises de Suramérica"
+    texto_simple = "Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value menor 
+    a 0.05 se rechaza la hipótesis nula, por ende si existe una diferencia significativa en las tasas de desempleo 
+    entre Colombia y los paises de Suramérica"
     st.text(texto_simple)
 
     latex_formula = r"H_0: \text{No hay diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
