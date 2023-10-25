@@ -68,15 +68,16 @@ with tab1:
     st.plotly_chart(fig)
 
     texto_al_lado = "Este es un ejemplo de texto que aparece al lado de la gráfica."
-    column1, column2 = st.beta_columns([1, 2])
-    with column1:
-        st.text(texto_al_lado)
-    # En la segunda columna, coloca la gráfica
-    with column2:
+    col1, col2 = st.beta_columns(2)
+    
+    with col1:
         fig = px.line(df, x="año", y="salud", color="pais", markers=True, title="Evolución del gasto en salud per cápita")
         fig.update_traces(textposition="bottom right")
         st.plotly_chart(fig)
-
+    
+    with col2:
+        st.text(texto_al_lado)
+        
     fig, ax = plt.subplots(1, 1)
     fig = px.line(df, x="año", y="agua", color="pais",markers=True, title="Evolución del acceso a recursos de agua dulce per capita")
     fig.update_traces(textposition="bottom right")
