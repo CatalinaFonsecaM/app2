@@ -415,17 +415,21 @@ with tab5:
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
-    df3['año'] = df3['año'].astype(int)
+    
     for i, ax in enumerate(axs):
         year_range = years[i]
         start_year, end_year = map(int, year_range.split("-"))
-        df_year = df3[(df3['año'] >= start_year) & (df3['año'] <= end_year)]
+        df_year = df5[(df5['año'] >= start_year) & (df5['año'] <= end_year)]
+    
         df_year.plot(
             column="indicador",
+            scheme="Quantiles",
             cmap="plasma",
-            legend=True,  # Habilita la leyenda
+            legend=True,
+            legend_kwds={"fmt": "{:.0f}"},
             ax=ax,
         )
+    
         ax.set_axis_off()
         ax.set_title(f"Indicador de bienestar {year_range} en Países de América")
     plt.suptitle("EVOLUCIÓN DEL INDICADOR DE BIENESTAR (2002-2019)")
