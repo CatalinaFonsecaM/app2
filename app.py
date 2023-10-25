@@ -292,6 +292,7 @@ with tab3:
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
+    df2['año'] = df2['año'].astype(int)
     
     for i, ax in enumerate(axs):
         year_range = years[i]
