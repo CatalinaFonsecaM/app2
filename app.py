@@ -328,26 +328,26 @@ with tab3:
     st.text(texto_simple)
 
     st.subheader('Variable #5: Acceso al agua')
-    latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso al agua potable entre Colombia y Suramerica}"
-    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso al agua potable entre Colombia y Suramerica}"
+    latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso a recursos de agua dulce entre Colombia y Suramerica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso a recursos de agua dulce entre Colombia y Suramerica}"
     st.latex(latex_formula)
 
     texto_simple = """
     Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value menor 
     a 0.05, por lo que se rechaza la hipótesis nula. Con esto se puede decir que 
-    existe una diferencia significativa en el acceso a agua potable 
+    existe una diferencia significativa en el acceso a recursos de agua dulce 
     entre Colombia y los paises de Suramérica.
     """
     st.text(texto_simple)
 
-    latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso al agua potable entre Colombia y Norteamérica}"
-    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso al agua potable entre Colombia y Norteamérica}"
+    latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso a recursos de agua dulce entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso a recursos de agua dulce entre Colombia y Norteamérica}"
     st.latex(latex_formula)
 
     texto_simple = """
     Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value mayor a 0.05,
     por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
-    diferencia significativa en el acceso a agua potable entre Colombia y Norteamérica.
+    diferencia significativa en el acceso a recursos de agua dulce entre Colombia y Norteamérica.
     """
     st.text(texto_simple)
 
