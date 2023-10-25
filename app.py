@@ -221,15 +221,6 @@ with tab3:
 
     fig, ax = plt.subplots(1, 1)
     df2.plot(
-    column='geometry'
-    )
-    plt.title("Mapa General")
-    ax.set_axis_off()
-    st.pyplot(fig)
-
-    
-    fig, ax = plt.subplots(1, 1)
-    df2.plot(
     column="pib",
     scheme="Quantiles",
     cmap="plasma",
