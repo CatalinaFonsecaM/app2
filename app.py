@@ -227,8 +227,9 @@ with tab3:
     st.latex(latex_formula)
     texto_simple = """
     Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value menor 
-    a 0.05 se rechaza la hipótesis nula, por ende si existe una diferencia significativa en las tasas de desempleo 
-    entre Colombia y los paises de Suramérica
+    a 0.05, por lo que se rechaza la hipótesis nula. Con esto se puede decir que 
+    existe una diferencia significativa en las tasas de desempleo 
+    entre Colombia y los paises de Suramérica.
     """
     st.text(texto_simple)
 
@@ -236,41 +237,119 @@ with tab3:
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
     st.latex(latex_formula)
 
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las pruebas de 2002 a 2010 se obtuvo un valor 
+    p value menor a 0.05 por lo que se rechaza la hipótesis nula. Con esto se puede decir que 
+    existe una diferencia significativa en las tasas de desempleo 
+    entre Colombia y los paises de Norteamérica. 
+
+    Sin embargo a partir del año 2011 hasta el 2019 se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica.
+    """
+    st.text(texto_simple)
+
     st.subheader('Variable #2: PIB (Producto Interno Bruto)')
     latex_formula = r"H_0: \text{No hay diferencia significativa en el Ingreso Per Cápita entre Colombia y Suramérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el Ingreso Per Cápita entre Colombia y Suramerica}"
     st.latex(latex_formula)
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las pruebas de 2002 a 2015 y de 2018 a 2019 se obtuvo un valor 
+    p value menor a 0.05 por lo que se rechaza la hipótesis nula. Con esto se puede decir que 
+    existe una diferencia significativa en el Ingreso Per cápita 
+    entre Colombia y los paises de Suramérica. 
+
+    Sin embargo en los años 2016 y 2017 se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en el Ingreso Per Cápita entre Colombia y Suramérica.
+    """
+    st.text(texto_simple)
 
     latex_formula = r"H_0: \text{No hay diferencia significativa en el Ingreso Per Cápita entre Colombia y Norteamérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el Ingreso Per Cápita entre Colombia y Norteamérica}"
     st.latex(latex_formula)
 
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en el Ingreso Per Cápita entre Colombia y Norteamérica.
+    """
+    st.text(texto_simple)
+
     st.subheader('Variable #3: Salud')
     latex_formula = r"H_0: \text{No hay diferencia significativa del gasto en salud entre Colombia y Suramerica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia ignificativa del gasto en salud entre Colombia y Suramerica}"
     st.latex(latex_formula)
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en el gasto per cápita en salud entre Colombia y Suramérica.
+    """
+    st.text(texto_simple)
 
     latex_formula = r"H_0: \text{No hay diferencia significativa del gasto en salud entre Colombia y Norteamérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia ignificativa del gasto en salud entre Colombia y Norteamérica}"
     st.latex(latex_formula)
 
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en el gasto per cápita en salud entre Colombia y Norteamérica.
+    """
+    st.text(texto_simple)
+
     st.subheader('Variable #4: Desnutrición')
-    latex_formula = r"H_0: \text{No hay diferencia significativa en los indicadores de desnutrición entre Colombia Suramerica}"
-    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en los indicadores de desnutrición entre Colombia y Suramerica}"
+    latex_formula = r"H_0: \text{No hay diferencia significativa en la tasa de desnutrición entre Colombia Suramerica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en la tasa de desnutrición entre Colombia y Suramerica}"
     st.latex(latex_formula)
 
-    latex_formula = r"H_0: \text{No hay diferencia significativa en los indicadores de desnutrición entre Colombia y Norteamérica}"
-    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en los indicadores de desnutrición entre Colombia y Norteamérica}"
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las pruebas de 2002 a 2009 y de 2013 a 2019
+    se obtuvo un valor p value mayor a 0.05,por lo que no se puede rechazar 
+    la hipótesis nula lo que indica que no hay diferencia significativa en 
+    la tasa de desnutrición entre Colombia y Suramérica.
+    
+    Sin embargo en los años 2010 a 2012 se obtuvo un valor p value menor a 0.05 
+    por lo que se rechaza la hipótesis nula. Con esto se puede decir que 
+    existe una diferencia significativa en la tasa de desnutrición 
+    entre Colombia y los paises de Suramérica.
+    """
+    st.text(texto_simple)
+
+    latex_formula = r"H_0: \text{No hay diferencia significativa en la tasa de desnutrición entre Colombia y Norteamérica}"
+    latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en la tasa de desnutrición entre Colombia y Norteamérica}"
     st.latex(latex_formula)
+
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en la tasa de denutrición entre Colombia y Norteamérica.
+    """
+    st.text(texto_simple)
 
     st.subheader('Variable #5: Acceso al agua')
     latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso al agua potable entre Colombia y Suramerica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso al agua potable entre Colombia y Suramerica}"
     st.latex(latex_formula)
 
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value menor 
+    a 0.05, por lo que se rechaza la hipótesis nula. Con esto se puede decir que 
+    existe una diferencia significativa en el acceso a agua potable 
+    entre Colombia y los paises de Suramérica.
+    """
+    st.text(texto_simple)
+
     latex_formula = r"H_0: \text{No hay diferencia significativa en el acceso al agua potable entre Colombia y Norteamérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en el acceso al agua potable entre Colombia y Norteamérica}"
     st.latex(latex_formula)
+
+    texto_simple = """
+    Se realizó la prueba de hipótesis por año y en las 17 pruebas se obtuvo un valor p value mayor a 0.05,
+    por lo que no se puede rechazar la hipótesis nula lo que indica que no hay 
+    diferencia significativa en el acceso a agua potable entre Colombia y Norteamérica.
+    """
+    st.text(texto_simple)
 
 
 with tab4:
