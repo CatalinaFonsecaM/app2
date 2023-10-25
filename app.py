@@ -63,7 +63,9 @@ with tab1:
     st.text(Textot)
 
     st.subheader('Mosaico de Mapas de Calor por Año')
+    
     years = df['año'].unique()
+    
     columnas_numericas = df.select_dtypes(include=['number'])
     num_columns = 4 
     num_rows = (len(years) + num_columns - 1) // num_columns
