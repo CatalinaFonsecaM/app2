@@ -358,6 +358,20 @@ with tab2:
                     labels={'nutricion': 'Nutrición', 'salud': 'Salud', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
 
+    x= """
+    En el gráfico anterior se evidencian diferencias notables en la distribución de los puntos. 
+    Los puntos azules de México tienden a agruparse en la región izquierda del gráfico, 
+    mientras que los puntos naranjas de Colombia se extienden desde el centro hacia la derecha 
+    en un rango de valores de "Salud" que varía entre aproximadamente 4 y 12 en el eje vertical. 
+    Esta divergencia sugiere que en México existe una tendencia a que, a medida que la "Nutrición"
+    disminuye, la "Salud" también lo haga, indicando una correlación negativa. Por el contrario, 
+    en Colombia, no se observa una relación tan evidente, ya que los valores de "Salud" son más 
+    diversos en un rango más amplio. En resumen, el gráfico apunta a una correlación negativa en 
+    México, mientras que en Colombia la relación entre estas variables parece ser más compleja y 
+    no se presta a una interpretación clara y simple.
+    """
+    st.text(x)
+
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Colombia','Mexico']
     df_seleccionados = df[df['pais'].isin(paises_seleccionados)]
@@ -367,6 +381,15 @@ with tab2:
                     labels={'pib': 'PIB', 'desempelo': 'Desempleo', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
 
+    x= """
+    Según el gráfico anterior la distribución sugiere que, en Colombia, a medida que el 
+    "PIB per cápita" aumenta, la "Tasa de Desempleo" tiende a disminuir, indicando una correlación 
+    negativa, mientras que los valores de "PIB per cápita de méxico" tienden a ser más altos y 
+    las tasas de desempleo más bajas en comparación con Colombia, lo que también podría indicar 
+    una correlación negativa.
+    """
+    st.text(x)
+    
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Colombia','United States']
     df_seleccionados = df[df['pais'].isin(paises_seleccionados)]
@@ -375,6 +398,18 @@ with tab2:
                     title='<b>Relación entre PIB percapita y Desempleo en Colombia y Estados Unidos</b>',
                     labels={'pib': 'PIB', 'desempelo': 'Desempleo', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
+
+    x= """
+    El gráfico de dispersión revela diferencias significativas en la distribución de 
+    los puntos, dado que Colombia se concentra en la parte izquierda, indicando que 
+    tasas de desempleo más altas están relacionadas con valores más bajos de PIB per 
+    cápita. Por otro lado, Estados Unidos se ubica en la parte derecha, sugiriendo 
+    que tasas de desempleo más bajas se asocian con un PIB per cápita considerablemente 
+    más alto. La correlación negativa se observa en ambos países, donde un menor desempleo 
+    tiende a estar vinculado a un mayor PIB per cápita, destacando estas tendencias 
+    contrapuestas en dos contextos económicos distintos.
+    """
+    st.text(x)
 
     fig, ax = plt.subplots(1, 1)
     paises_seleccionados = ['Colombia','United States']
@@ -385,6 +420,17 @@ with tab2:
                     labels={'nutricion': 'Nutrición', 'salud': 'Salud', 'tamano_puntos': 'Tamaño de Puntos'})
     st.plotly_chart(fig)
 
+    x= """
+    Según lo anterior se puede observar que en  Estados Unidos, los datos se concentran 
+    en la parte izquierda del gráfico, lo que sugiere una alta salud y una baja 
+    desnutrición, mientras que en Colombia, los datos se ubican en la región central y 
+    derecha, lo que indica una salud más baja y una nutrición generalmente baja. En resumen, 
+    el gráfico destaca una correlación positiva en Estados Unidos, donde una mayor salud 
+    se asocia con una menor desnutrición, mientras que en Colombia, la correlación es negativa, 
+    con una tendencia a tener tanto baja salud como baja nutrición.
+    """
+    st.text(x)
+    
 with tab3:
 
     st.subheader('Variable #1: Tasa de desempleo')
@@ -570,8 +616,8 @@ with tab4:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"PIB de {year_range} en Países de América Latina")
-    plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA LATINA (2002-2019)")
+        ax.set_title(f"PIB de {year_range} en Países de América")
+    plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -596,9 +642,9 @@ with tab4:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"PIB de {year_range} en Países de América Latina")
+        ax.set_title(f"PIB de {year_range} en Países de América")
     
-    plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA LATINA (2002-2019)")
+    plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -624,8 +670,8 @@ with tab4:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"Gasto en salud  {year_range} en Países de América Latina")
-    plt.suptitle("EVOLUCIÓN DEL GASTO EN SALUD EN AMÉRICA LATINA (2002-2019)")
+        ax.set_title(f"Gasto en salud  {year_range} en Países de América")
+    plt.suptitle("EVOLUCIÓN DEL GASTO EN SALUD EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -650,8 +696,8 @@ with tab4:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"Nivel de desnutricón de {year_range} en Países de América Latina")
-    plt.suptitle("EVOLUCIÓN DE LA DESNUTRICIÓN EN AMÉRICA LATINA (2002-2019)")
+        ax.set_title(f"Nivel de desnutricón de {year_range} en Países de América")
+    plt.suptitle("EVOLUCIÓN DE LA DESNUTRICIÓN EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -675,8 +721,8 @@ with tab4:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"Nivel de acceso al agua {year_range} en Países de América Latina")
-    plt.suptitle("EVOLUCIÓN DEL ACCESO AL AGUA EN AMÉRICA LATINA (2002-2019)")
+        ax.set_title(f"Nivel de acceso al agua {year_range} en Países de América")
+    plt.suptitle("EVOLUCIÓN DEL ACCESO AL AGUA EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -700,8 +746,8 @@ with tab4:
         )
     
         ax.set_axis_off()
-        ax.set_title(f"Nivel de desempleo {year_range} en Países de América Latina")
-    plt.suptitle("EVOLUCIÓN DEL DESEMPLEO EN AMÉRICA LATINA (2002-2019)")
+        ax.set_title(f"Nivel de desempleo {year_range} en Países de América")
+    plt.suptitle("EVOLUCIÓN DEL DESEMPLEO EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -710,6 +756,14 @@ with tab5:
     latex_formula = r"\frac{{PIB + Salud + Desnutrición + Agua}}{{Desempleo}}"
     st.latex(latex_formula)
 
+    texto_simple = """
+    Para la construcción de este indicador, en primer lugar se toman las 5 variables 
+    estudiadas, 4 de ellas se ponen en el numerador y en el denominador se establece 
+    la que afecta a las restantes, que para este estudio es la de desempleo. 
+    Así mismo, las variables fueron estandarizadas y luego estandarizadas.
+    """
+    st.text(texto_simple)
+    
     st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
@@ -734,6 +788,31 @@ with tab5:
     plt.suptitle("EVOLUCIÓN DEL INDICADOR DE BIENESTAR (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
+
+    texto_simple = """
+    Los mapas permiten visualizar cómo se encuentra el bienestar de cada uno de los países 
+    de América respecto a los resultados arrojados por el indicador construido, al igual 
+    que en el análisis georreferenciado se utilizaron los mismos periodos de tiempo, que 
+    logran evidenciar el cambio experimentado en cada uno de los países a través del tiempo 
+    entre 2002 y 2019. 
+    
+    De acuerdo con el indicador, entre el periodo de 2002- 2007, antes de la crisis financiera 
+    mundial de 2008, los países con mayor bienestar de América fueron Venezuela y Chile,
+    mientras que los de menor bienestar fueron Estados Unidos y Canadá. 
+    
+    Entre 2008 y 2011, en medio de la crisis financiera y después de esta los países con mayor 
+    bienestar fueron Estados Unidos, Canadá, Venezuela, Brasil y Chile, mientras que el de menor 
+    bienestar fue Uruguay.
+    
+    Entre 2012 y 2015, el país con mayor índice de bienestar fue Canadá, mientras que los 
+    países con peores resultados de bienestar fueron Estados Unidos, Venezuela, Perú y Chile. 
+    
+    Finalmente, entre 2016 y 2019 los países con mejores resultados en el índice de bienestar 
+    fueron Chile y Uruguay, mientras que los de peor resultado fueron Estados Unidos, Canadá, 
+    Venezuela y Paraguay.
+
+    """
+    st.text(texto_simple)
 
 
 
