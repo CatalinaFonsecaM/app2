@@ -38,7 +38,17 @@ with tab1:
                 with cols[j]:
                     st.subheader(f"{titulo}")
                     st.dataframe(serie.reset_index()) 
-
+    Textot="""
+    Las medias de la tasa de desnutrición entre 2002 y 2019 reflejan el desempeño regional, siendo 
+    Bolivia y Ecuador los países con las tasas más altas (19.75% y 15.24%, respectivamente), mientras 
+    que Canadá y Estados Unidos tienen las tasas más bajas (2.5%). Respecto al ingreso per cápita, 
+    Estados Unidos lidera con $50,825 anuales, mientras que Bolivia tiene el menor ingreso con $2,144 
+    anuales. En cuanto al desempleo, Colombia muestra la peor tasa (10.65%), mientras que Bolivia tiene 
+    la más baja (2.76%). En el gasto per cápita en salud, Estados Unidos destaca con $7,944, y 
+    Bolivia tiene el menor gasto con $124. En términos de acceso per cápita a recursos de agua dulce, 
+    Canadá lidera con 83,509 cm3, y México tiene el menor acceso con 3,623 cm3.
+    """
+    st.text(Textot)
 
     st.subheader('Mosaico de Mapas de Calor por Año')
     years = df['año'].unique()
