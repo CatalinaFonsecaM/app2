@@ -224,9 +224,11 @@ with tab3:
     st.subheader('Variable #1: Tasa de desempleo')
     latex_formula = r"H_0: \text{No hay diferencia significativa en las tasas de desempleo entre Colombia y Suramérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y suramerica}"
+    st.latex(latex_formula)
 
     latex_formula = r"H_0: \text{No hay diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
     latex_formula += r", \\ H_1: \text{Existe una diferencia significativa en las tasas de desempleo entre Colombia y Norteamérica}"
+    st.latex(latex_formula)
 
 
 
