@@ -19,6 +19,18 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(['Análisis estadístico', 'Análisis gr�
 with tab1:
     st.dataframe(df.describe())
 
+    t= """
+    La media de cada una de las variables teniendo en cuenta los 17 años y los 15 países del 
+    panel, reflejan el desempeño de cada una de las variables escogidas para el estudio en la 
+    región a lo largo del tiempo. La tasa  promedio de desempleo fue de 6.87%, el ingreso per 
+    capita promedio fue de $13,292 dólares, pasando al gasto per capita en salud este fue de 
+    $ 1, 350 dólares, mientas que el acceso a agua a recursos de agua dulce de la región en 
+    centimetros cubidos fue de 20,948. Finalmente la región conto con una tasa de desnutrición 
+    promedio de 6.25%. 
+    """
+    st.text(t)
+
+
     resumen = {}
 
     resumen['Medias nutricion'] = df.groupby(['pais']).agg({'nutricion':'mean'})
@@ -68,6 +80,13 @@ with tab1:
                     fig, ax = plt.subplots()
                     sns.heatmap(corr_matrix, annot=True, cmap="Blues", linewidths=0.5)
                     st.pyplot(fig)
+
+    x= """
+    Los mapas de calor, reflejan la relación entre las variables escogidas a lo largo de los años, 
+    se evidencia que estas relaciones son homogeneas en los 17 años y que tienen una baja relación, 
+    a excepción del pib y la salud que tenían una alta relación entre 0.96 y 0.97 para todos los años. 
+    """
+    st.text(x)
     
     st.divider()
     st.subheader('Análisis gráfico')
@@ -76,21 +95,56 @@ with tab1:
     fig = px.line(df, x="año", y="pib", color="pais",markers=True, title="Evolución del ingreso per capita")
     fig.update_traces(textposition="bottom right")
     st.plotly_chart(fig)
-
+    x= """
+    La evolución del ingreso per capita, nos permite evidenciar en que puntos del panel de tiempo 
+    los países tuvieron puntos altos o bajos, así mismo conocer cuales fueron los de mejor y peor 
+    desempeño, evidenciando que los mejores resultados fueron los de Estados Unidos, seguido por 
+    Canadá, pese a que ambos tuvieron caidas en 2009 que pueden deberse a la crisis financiera de 
+    2008, nunca perdieron el mejor desempeño. Por su parte, el de peor desempeño fue Bolivia. 
+    """
+    st.text(x)
+    
     fig, ax = plt.subplots(1, 1)
     fig = px.line(df, x="año", y="salud", color="pais",markers=True, title="Evolución del gasto en salud per capita")
     fig.update_traces(textposition="bottom right")
     st.plotly_chart(fig)
+
+    x= """
+    La evolución del gasto en salud percapita, nos permite evidenciar en que puntos del panel de 
+    tiempo los países tuvieron puntos altos o bajos, así mismo conocer cuales fueron los de mejor 
+    y peor desempeño,se puede evidenciar, que los mejores resultados fueron para Estados Unidos y 
+    Canadá, no obstante estas no fueron tan homogeneos a través del tiempo, ya que tuvieron puntos 
+    altos y bajos. Por su parte,el país con peor desempeño a lo largo del tiempo fue Bolivia, se 
+    logra evidenciar que Venezuela también baja su desempeño después del estallido de su crisis social. 
+    """
+    st.text(x)
     
     fig, ax = plt.subplots(1, 1)
     fig = px.line(df, x="año", y="agua", color="pais",markers=True, title="Evolución del acceso a recursos de agua dulce per capita")
     fig.update_traces(textposition="bottom right")
     st.plotly_chart(fig)
-
+    x= """
+    La evolución del acceso a recursos de agua dulce, nos permite evidenciar en que puntos del panel 
+    de tiempo los países tuvieron puntos altos o bajos, así mismo conocer cuales fueron los de mejor 
+    y peor desempeño, algo interesante en general es que el acceso de recursos de agua dulce han disminuido 
+    a lo largo del tiempo en los países de la región, los países con mejor desempeño son Canadá, Perú, Chile 
+    y Colombia. 
+    """
+    st.text(x)
+    
     fig, ax = plt.subplots(1, 1)
     fig = px.line(df, x="año", y="desempleo", color="pais",markers=True, title="Evolución del % de desempleados en la poblacion activa")
     fig.update_traces(textposition="bottom right")
     st.plotly_chart(fig)
+
+    x= """
+    La evolución del acceso a recursos de agua dulce, nos permite evidenciar en que puntos del panel 
+    de tiempo los países tuvieron puntos altos o bajos, así mismo conocer cuales fueron los de mejor 
+    y peor desempeño, algo interesante en general es que el acceso de recursos de agua dulce han disminuido 
+    a lo largo del tiempo en los países de la región, los países con mejor desempeño son Canadá, Perú, Chile 
+    y Colombia. 
+    """
+    st.text(x)
 
     fig, ax = plt.subplots(1, 1)
     fig = px.line(df, x="año", y="nutricion", color="pais",markers=True, title="Evolución del % de la población en situacion de desnutrición")
