@@ -410,7 +410,6 @@ with tab5:
     latex_formula = r"\frac{{PIB + Salud + Desnutrición + Agua}}{{Desempleo}}"
     st.latex(latex_formula)
 
-
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
     years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
@@ -421,8 +420,7 @@ with tab5:
         df_year = df3[(df3['año'] >= start_year) & (df3['año'] <= end_year)]
         df_year.plot(
             column="indicador",
-            scheme="Quantiles",
-            cmap="plasma",
+            cmap="plasma",  # Configura el esquema de color aquí
             legend=True,
             legend_kwds={"fmt": "{:.0f}"},
             ax=ax,
