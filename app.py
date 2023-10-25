@@ -67,25 +67,10 @@ with tab1:
     fig.update_traces(textposition="bottom right")
     st.plotly_chart(fig)
 
-    texto_al_lado = "Este es un ejemplo de texto que aparece al lado de la gráfica."
-    
-    # Crear una columna en Streamlit para contener la gráfica y el texto
-    st.write('<div style="display: flex;">', unsafe_allow_html=True)
-    
-    # Colocar la gráfica en la primera parte
-    with st.empty():
-        fig = px.line(df, x="año", y="salud", color="pais", markers=True, title="Evolución del gasto en salud per cápita")
-        fig.update_traces(textposition="bottom right")
-        st.plotly_chart(fig)
-    
-    # Colocar el texto en la segunda parte
-    st.write('<div style="margin-left: 20px;">', unsafe_allow_html=True)
-    st.text(texto_al_lado)
-    
-    # Cerrar la etiqueta div
-    st.write('</div>', unsafe_allow_html=True)
-
-
+    fig, ax = plt.subplots(1, 1)
+    fig = px.line(df, x="año", y="salud", color="pais",markers=True, title="Evolución del gasto en salud per capita")
+    fig.update_traces(textposition="bottom right")
+    st.plotly_chart(fig)
     
     fig, ax = plt.subplots(1, 1)
     fig = px.line(df, x="año", y="agua", color="pais",markers=True, title="Evolución del acceso a recursos de agua dulce per capita")
