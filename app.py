@@ -218,6 +218,12 @@ with tab2:
     st.plotly_chart(fig)
 
 with tab3:
+
+    df2.plot()
+    plt.title("Mapa General")
+    plt.show()
+
+    
     fig, ax = plt.subplots(1, 1)
     df2.plot(
     column="pib",
