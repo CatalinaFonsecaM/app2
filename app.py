@@ -219,6 +219,11 @@ with tab2:
 
 with tab3:
 
+    st.title("Mapa General")
+    fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+    df2.plot(ax=ax)
+    st.pyplot(fig)
+    
     fig, ax = plt.subplots(1, 1)
     df2.plot(
     column="pib",
