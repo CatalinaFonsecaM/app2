@@ -79,7 +79,7 @@ with tab1:
                     df_year = columnas_numericas[columnas_numericas['año'] == year]
                     corr_matrix = df_year.corr()
                     fig, ax = plt.subplots()
-                    sns.heatmap(corr_matrix, annot=True, cmap="RdYlGn", linewidths=0.5)
+                    sns.heatmap(corr_matrix, annot=True, cmap="Spectral", linewidths=0.5)
                     st.pyplot(fig)
 
     x= """
