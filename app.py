@@ -621,32 +621,15 @@ with tab4:
     plt.tight_layout()
     st.pyplot(fig)
 
-    st.divider()
-    fig, axs = plt.subplots(2, 2, figsize=(12, 12))
-    axs = axs.flatten()
-    years = ["2002-2007", "2008-2011", "2012-2015", "2016-2019"]
-    df2['año'] = df2['año'].astype(int)
-    
-    for i, ax in enumerate(axs):
-        year_range = years[i]
-        start_year, end_year = map(int, year_range.split("-"))
-        df_year = df2[(df2['año'] >= start_year) & (df2['año'] <= end_year)]
-    
-        df_year.plot(
-            column="pib",
-            scheme="Quantiles",
-            cmap="plasma",
-            legend=True,
-            legend_kwds={"fmt": "{:.0f}"},
-            ax=ax,
-        )
-    
-        ax.set_axis_off()
-        ax.set_title(f"PIB de {year_range} en Países de América")
-    
-    plt.suptitle("EVOLUCIÓN DEL PIB EN AMÉRICA (2002-2019)")
-    plt.tight_layout()
-    st.pyplot(fig)
+    texto_simple = """
+    Teniendo en cuenta el gráfico anterior podemos observar que de 2002 a 2007 Estados Unidos, Venezuela 
+    y chile contaban con un PIB superior al de otros países de la región, mientras que con el periodo de 
+    crisis de 2008 a 2011 se puede observar 2 fenómenos, por un lado debido a la crisis inflacionaria 
+    Venezuela disminuye su PIB, mientras que Colombia logra aumentarlo esto debido a factores externos 
+    como la lluvia de dólares de negocios ilegales que ingresó al país.Finalmente se debe destacar que 
+    en los periodos de 2012 a 2019 la región sur ha demostrado crecimiento significativo en su PIB.
+    """
+    st.text(texto_simple)
 
     st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
@@ -675,6 +658,15 @@ with tab4:
     plt.tight_layout()
     st.pyplot(fig)
 
+    texto_simple = """
+    Con base en lo anterior, se puede observar que en el primer periodo de tiempo Bolivia presentó el 
+    indicador más bajo en gasto en salud, así mismo para el segundo periodo ( 2008-2011) se observa que 
+    Brasil, Venezuela y Chile disminuyeron su gasto significante. Finalmente, se logró identificar que 
+    en los dos últimos periodos los países de la región siguieron disminuyendo considerablemente 
+    el gasto en salud. 
+    """
+    st.text(texto_simple)
+
     st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
@@ -701,6 +693,15 @@ with tab4:
     plt.tight_layout()
     st.pyplot(fig)
 
+    texto_simple = """
+    Se puede observar como de 2002 a 2007 USA y Canada contaban con el menor índice de desnutrición, 
+    sin embargo países como Ecuador y Bolivia y registraban los índices más altos, así mismo en el 
+    segundo (2008 a 2011) y tercer periodo (2012 a 2015) Colombia, Bolivia, Venezuela y Paraguay 
+    aumentan considerablemente su índice de desnutrición. Finalmente, se observó que el único país del 
+    cono sur en tener niveles bajos de desnutrición fue Uruguay.  
+    """
+    st.text(texto_simple)
+
     st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
@@ -726,6 +727,14 @@ with tab4:
     plt.tight_layout()
     st.pyplot(fig)
 
+    texto_simple = """
+    En materia de acceso al agua se tomó como variable de análisis los recursos hídricos de 
+    agua dulce con los que contaba cada país, para ello en los 4 periodos se logró observar 
+    que Canadá, Perú, Colombia y Chile son en general los países con mayor acceso al agua 
+    en comparación a la región. 
+    """
+    st.text(texto_simple)
+
     st.divider()
     fig, axs = plt.subplots(2, 2, figsize=(12, 12))
     axs = axs.flatten()
@@ -750,6 +759,18 @@ with tab4:
     plt.suptitle("EVOLUCIÓN DEL DESEMPLEO EN AMÉRICA (2002-2019)")
     plt.tight_layout()
     st.pyplot(fig)
+
+    texto_simple = """
+    Durante el período de 2002 a 2019 en América, se destacan dos elementos clave. 
+    En primer lugar, la crisis financiera global de 2008 tuvo un impacto significativo 
+    en la región, causando un aumento temporal en las tasas de desempleo en varios países. 
+    En segundo lugar, en el Cono Sur, Argentina experimentó un período de crisis económica 
+    en 2001-2002, seguido de una recuperación en la que se observaron fluctuaciones en 
+    las tasas de desempleo. Chile y Uruguay se destacan por mantener tasas de desempleo 
+    relativamente bajas y estables a lo largo de este período, lo que contribuyó a su 
+    estabilidad económica en comparación con otros países de la región.
+    """
+    st.text(texto_simple)
 
 with tab5:
 
