@@ -834,12 +834,11 @@ with tab5:
     st.text(texto_simple)
 
 with tab6:
-    x="""
-    - Catalina Fonseca Martinez
-    - Jeffrey Chamorro Sanchez
-    - Karen Pedraza Mesa
-    """
-    st.subheader(x)
+
+    st.subheader('Catalina Fonseca Martinez')
+    st.subheader('Jeffrey Chamorro Sanchez')
+    st.subheader('Karen Pedraza Mesa')
+
 
 
 
