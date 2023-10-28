@@ -774,14 +774,14 @@ with tab4:
 
 with tab5:
 
-    latex_formula = r"\sqrt[5]{\frac{{PIB + Salud + Desnutrición + Agua}}{{Desempleo}}}"
+    latex_formula = r"\sqrt[5]{\frac{{PIB + Salud + Agua}}{{Desempleo + Desnutrición}}}"
     st.latex(latex_formula)
 
     texto_simple = """
-    Para la construcción de este indicador, en primer lugar se toman las 5 variables 
-    estudiadas, 4 de ellas se ponen en el numerador y en el denominador se establece 
-    la que afecta a las restantes, que para este estudio es la de desempleo. 
-    Así mismo, las variables fueron estandarizadas y luego estandarizadas.
+    Para la construcción de este indicador, en primer lugar se toman las 5 variables estudiadas, 
+    3 de ellas se ponen en el numerador y en el denominador se establecen las variables  que afectan 
+    negativamente a las a las restantes, que para este estudio es la de desempleo y la tasa de desnutrición. 
+    Para la construcción de este indicador, las variables fueron escaladas a máximos mínimos. 
     """
     st.text(texto_simple)
     
@@ -811,26 +811,24 @@ with tab5:
     st.pyplot(fig)
 
     texto_simple = """
-    Los mapas permiten visualizar cómo se encuentra el bienestar de cada uno de los países 
-    de América respecto a los resultados arrojados por el indicador construido, al igual 
-    que en el análisis georreferenciado se utilizaron los mismos periodos de tiempo, que 
-    logran evidenciar el cambio experimentado en cada uno de los países a través del tiempo 
-    entre 2002 y 2019. 
+    Los mapas permiten visualizar cómo se encuentra el bienestar de cada uno de los países de América 
+    respecto a los resultados arrojados por el indicador construido, al igual que en el análisis georreferenciado 
+    se utilizaron los mismos periodos de tiempo, que logran evidenciar el cambio experimentado en cada uno de 
+    los países a través del tiempo entre 2002 y 2019. 
     
-    De acuerdo con el indicador, entre el periodo de 2002- 2007, antes de la crisis financiera 
-    mundial de 2008, los países con mayor bienestar de América fueron Venezuela y Chile,
-    mientras que los de menor bienestar fueron Estados Unidos y Canadá. 
+    De acuerdo con el indicador, entre el periodo de 2002- 2007, antes de la crisis financiera mundial de 2008, 
+    los países con mayor bienestar de América fueron Estados Unidos y Canadá y el peor fue Bolivia. 
     
-    Entre 2008 y 2011, en medio de la crisis financiera y después de esta los países con mayor 
-    bienestar fueron Estados Unidos, Canadá, Venezuela, Brasil y Chile, mientras que el de menor 
-    bienestar fue Uruguay.
+    Entre 2008 y 2011, en medio de la crisis financiera y después de esta los países con mayor bienestar fueron 
+    Canadá, Perú y Uruguay, mientras que los de menor bienestar fueron Colombia y Bolivia
     
-    Entre 2012 y 2015, el país con mayor índice de bienestar fue Canadá, mientras que los 
-    países con peores resultados de bienestar fueron Estados Unidos, Venezuela, Perú y Chile. 
+    Entre 2012 y 2015, los países con mayor índice de bienestar fueron Estados Unidos, Canadá y Perú mientras 
+    que los países con peores resultados de bienestar fueron Colombia, Venezuela  y Bolivia. 
     
-    Finalmente, entre 2016 y 2019 los países con mejores resultados en el índice de bienestar 
-    fueron Chile y Uruguay, mientras que los de peor resultado fueron Estados Unidos, Canadá, 
-    Venezuela y Paraguay.
+    Finalmente, entre 2016 y 2019 los países con mejores resultados en el índice de bienestar fueron Estados 
+    Unidos y Canadá, mientras que los de menor bienestar fueron Colombia, Ecuador, Venezuela y Paraguay, lo que 
+    hace notar un deterioro en el bienestar general de la región.
+
 
     """
     st.text(texto_simple)
@@ -841,7 +839,7 @@ with tab6:
     - Jeffrey Chamorro Sanchez
     - Karen Pedraza Mesa
     """
-    st.text(x)
+    st.subheader(x)
 
 
 
