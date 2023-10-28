@@ -796,7 +796,7 @@ with tab5:
         df_year = df3[(df3['año'] >= start_year) & (df3['año'] <= end_year)]
     
         df_year.plot(
-            column="indicador",
+            column="indicadorf_sqrt",
             scheme="Quantiles",
             cmap="plasma",
             legend=True,
