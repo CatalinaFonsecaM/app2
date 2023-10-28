@@ -11,7 +11,7 @@ st.set_page_config(layout='wide')
 st.title("Medición del bienestar")
 df = pd.read_csv('dataframe.csv')
 df2 = gpd.read_file('dataframe2.geojson')
-df3 = gpd.read_file('df3.geojson')
+df3 = gpd.read_file('df4.geojson')
 
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Análisis estadístico', 'Análisis gráfico específico', 'Análisis de hipótesis', 'Análisis georreferenciado', 'Indicador de bienestar', 'Creado por:'])
