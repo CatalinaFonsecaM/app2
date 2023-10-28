@@ -774,7 +774,7 @@ with tab4:
 
 with tab5:
 
-    latex_formula = r"\frac{{PIB + Salud + Desnutrición + Agua}}{{Desempleo}}"
+    latex_formula = r"\sqrt[5]{\frac{{PIB + Salud + Desnutrición + Agua}}{{Desempleo}}}"
     st.latex(latex_formula)
 
     texto_simple = """
